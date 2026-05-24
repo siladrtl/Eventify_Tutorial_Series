@@ -10,7 +10,7 @@ namespace Eventify_Tutorial_Series.Domain.Common
     {
         public Guid Id { get; set; }
         public DateTimeOffset CreatedDate { get; set; }
-        public DateTimeOffset UpdatedDate { get; set; }
+        public DateTimeOffset? UpdatedDate { get; set; }
 
     }
 }

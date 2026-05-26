@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace Eventify_Tutorial_Series.Application.RequestParameters
 {
-    public record Pagination(int ItemCount, int PageCount);
+    public record Pagination(int ItemCount=5, int PageCount = 0);
 }

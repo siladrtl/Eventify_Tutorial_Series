@@ -25,14 +25,19 @@ namespace Eventify_Tutorial_Series.Persistence.Services
 
         public async Task CreateEventAsync(CreateEventDTO createEventDTO)
         {
-            var newEvent = new Event()
+            if (createEventDTO is not null)
             {
-              Title = createEventDTO.Title,
-              Date = createEventDTO.Date,
-              Location = createEventDTO.location
-            };
-           await _context.Events.AddAsync(newEvent);
-           await _context.SaveChangesAsync();
+                var newEvent = new Event()
+                {
+                    Title = createEventDTO.Title,
+                    Date = createEventDTO.Date,
+                    Location = createEventDTO.location
+                };
+                await _context.Events.AddAsync(newEvent);
+                await _context.SaveChangesAsync();
+            }
+            else
+                throw new NullReferenceException();
         }
 
         public async Task<IEnumerable<EventDTO>> GetAllEventsAsync(Pagination pagination)

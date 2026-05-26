@@ -1,1 +1,1 @@
-İzlediğim Onion Architecture Eğitim Serisi'ne ait çalışmadır.
+This is a work from the Onion Architecture Training Series that I followed.
